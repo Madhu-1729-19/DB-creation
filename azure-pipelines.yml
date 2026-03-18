@@ -1,5 +1,5 @@
 pool:
-  name: 'Madhu'
+  name: 'project'
 
 stages:
 - stage: Deploy
@@ -10,7 +10,7 @@ stages:
     - task: Kubernetes@1
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: 'kubeconfig'
+        kubernetesServiceEndpoint: 'kubework'
         azureResourceGroup: 'azure-madhu'
         kubernetesCluster: 'dev-cluster'
         namespace: 'three-tier'
