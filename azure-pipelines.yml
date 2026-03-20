@@ -1,5 +1,5 @@
 pool:
-  name: 'project'
+  name: 'editor'
 
 stages:
 - stage: Deploy
@@ -10,8 +10,8 @@ stages:
     - task: Kubernetes@1
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: 'kubework'
-        azureResourceGroup: 'azure-madhu'
+        kubernetesServiceEndpoint: 'kubernates'
+        azureResourceGroup: 'pipeline-33'
         kubernetesCluster: 'dev-cluster'
         namespace: 'three-tier'
         command: 'apply'
